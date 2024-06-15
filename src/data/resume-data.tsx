@@ -33,7 +33,6 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://jarocki.me",
   contact: {
     email: "patilpranit3112@gmail.com",
-    tel: "+918698437788",
     social: [
       {
         name: "GitHub",
@@ -115,6 +114,7 @@ export const RESUME_DATA = {
         label: "epicblogs",
         href: "https://epic-blogs.vercel.app/",
       },
+     github:"https://github.com/PranitPatil03/modern-blogging-frontend"
     },
     {
       title: "QuickCart",
@@ -132,6 +132,7 @@ export const RESUME_DATA = {
         label: "ecommerce",
         href: "https://e-commerce-gamma-ruddy.vercel.app/",
       },
+      github:"https://github.com/PranitPatil03/e-commerce-frontend"
     },
   ],
 } as const;

@@ -1,23 +1,43 @@
+"use client";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import {
+  GlobeIcon,
+  MailIcon,
+  MoonIcon,
+  PhoneIcon,
+  SunIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
-
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-};
+import { useTheme } from "next-themes";
+import { useState } from "react";
 
 export default function Page() {
+  const { setTheme } = useTheme();
+  const [theme, setThemeState] = useState("light");
+
+  const handleThemeChange = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    setThemeState(newTheme);
+  };
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
+      <section className="mx-auto w-full max-w-2xl space-y-8 print:space-y-4">
+        <div className="flex justify-end">
+          <Button variant="default" size="icon" onClick={handleThemeChange}>
+            <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Theme</span>
+          </Button>
+        </div>
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -47,18 +67,6 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -79,11 +87,6 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
-              ) : null}
             </div>
           </div>
 
@@ -102,7 +105,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
-              <Card key={work.company}>
+              <Card key={work.company} className="border p-5 shadow-md">
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
@@ -114,7 +117,7 @@ export default function Page() {
                         {work.badges.map((badge) => (
                           <Badge
                             variant="secondary"
-                            className="align-middle text-xs print:text-[8px] print:leading-tight print:px-1 print:py-0.5"
+                            className="align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
                             key={badge}
                           >
                             {badge}
@@ -142,7 +145,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <Card key={education.school}>
+              <Card key={education.school} className="border p-5 shadow-md">
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
@@ -162,7 +165,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 rounded-md border p-5 shadow-md">
             {RESUME_DATA.skills.map((skill) => {
               return (
                 <Badge className="print:text-[10px]" key={skill}>
@@ -175,7 +178,7 @@ export default function Page() {
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols- print:gap-2 md:grid-cols-1 lg:grid-cols-1">
+          <div className="print:grid-cols- -mx-3 grid grid-cols-1 gap-3 print:gap-2 md:grid-cols-1 lg:grid-cols-1">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
@@ -184,6 +187,7 @@ export default function Page() {
                   description={project.description}
                   tags={project.techStack}
                   link={"link" in project ? project.link.href : undefined}
+                  github={project.github}
                 />
               );
             })}
@@ -191,7 +195,7 @@ export default function Page() {
         </Section>
       </section>
 
-      <CommandMenu
+      {/* <CommandMenu
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
@@ -202,7 +206,7 @@ export default function Page() {
             title: socialMediaLink.name,
           })),
         ]}
-      />
+      /> */}
     </main>
   );
 }
