@@ -20,113 +20,86 @@ import {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Pranit Patil",
+  initials: "PP",
+  location: "Mumbai, India",
+  locationLink: "https://www.google.com/maps/place/mumbai/india",
   about:
     "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
   summary:
     "As a Full Stack Engineer, I specialize in taking products from concept to launch. I excel in leading teams and creating environments where individuals perform at their best. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience working remotely with companies worldwide.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
+  avatarUrl: "https://avatars.githubusercontent.com/u/91155068?s=400&u=d56f9587068c31cfd3f8196071a3fef4836fc563&v=4",
   personalWebsiteUrl: "https://jarocki.me",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "patilpranit3112@gmail.com",
+    tel: "+918698437788",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/pranitpatil03",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/patilpranit03/",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://x.com/Patilpranit3112",
         icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Vidyavardhini’s College of Engineering and Technology",
+      degree: "Bachelor's Degree in Computer Engineering",
+      start: "2020",
+      end: "2024",
     },
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
+      company: "Hubx.ai",
+      link: "https://www.hubx.ai/",
       badges: ["Remote"],
-      title: "Software Architect",
+      title: "Full Stack Intern",
       logo: ConsultlyLogo,
-      start: "2024",
-      end: null,
+      start: "Jan 2023",
+      end: "July 2023",
       description:
-        "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
+        "Worked on revamping the Point-of-Sale UI module using React and UIkit, enhancing dashboard interfaces in the curation module. Integrated Cashfree payment API and WhatsApp Cloud API for seamless onboarding and critical notifications, and improved email service reliability with Nodemailer API.",
     },
     {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: ["Remote"],
-      title: "Senior Full Stack Developer",
+      company: "Tech Cryptors",
+      link: "https://techcryptors.com/",
+      badges: ["Dahisar, Mumbai"],
+      title: "Web Development Intern",
       logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
+      start: "Dec 2022",
+      end: "Jan 2023",
       description:
-        "Implemented new features, led a squad, improved code delivery process, and initiated migration from Emotion to Tailwind CSS. Technologies: React, TypeScript, GraphQL",
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description:
-        "Created Android mobile apps and led teams for companies like Vision Media, DKMS, and AAA. Built a live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: [],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description:
-        "Led the Android team and developed apps for major Polish companies like LOT, Polskie Radio, Agora, and PolskaPress",
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: [],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description: "Developed and tested software for LTE base stations",
+        "Worked as a Web Development Intern at Tech Cryptors, designing a chatbot for interactive communication and implementing WordPress pages for services and courses. Created navigation components using HTML, CSS, and JavaScript to enhance user experience and ensure seamless website navigation.",
     },
   ],
   skills: [
     "JavaScript",
     "TypeScript",
-    "React/Next.js/Remix",
+    "React",
+    "Next.js",
     "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "HTML/CSS",
+    "SQL",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "Git",
+    "Docker",
   ],
   projects: [
     {
-      title: "Parabol",
+      title: "EpicBlogs",
       techStack: [
         "Full Stack Developer",
         "TypeScript",
@@ -135,15 +108,15 @@ export const RESUME_DATA = {
         "GraphQL",
       ],
       description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
+        "EpicBlogs is a comprehensive blogging platform that enables users to create, edit, and publish blogs seamlessly. It offers features like user authentication, rich text editing, image uploads, and user profiles. Users can interact with blogs through likes and comments, search for blogs and users, and receive notifications for new interactions. The platform also provides an intuitive blog dashboard for managing authored content and viewing analytics.",
       logo: ParabolLogo,
       link: {
-        label: "github.com",
-        href: "https://parabol.co/",
+        label: "epicblogs",
+        href: "https://epic-blogs.vercel.app/",
       },
     },
     {
-      title: "Evercast",
+      title: "QuickCart",
       techStack: [
         "Lead Frontend Developer",
         "TypeScript",
@@ -152,11 +125,11 @@ export const RESUME_DATA = {
         "GraphQL",
       ],
       description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
+        "Developed an e-commerce platform where users can browse products, add items to their cart, and make purchases seamlessly. The platform features user authentication, product search, and a streamlined checkout process to enhance the shopping experience.",
       logo: EvercastLogo,
       link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
+        label: "ecommerce",
+        href: "https://e-commerce-gamma-ruddy.vercel.app/",
       },
     },
     {
@@ -208,80 +181,6 @@ export const RESUME_DATA = {
         label: "useminimal.com",
         href: "https://useminimal.com/",
       },
-    },
-    {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Generates beautiful wallpapers using random shapes and gradients",
-      logo: BarepapersLogo,
-      link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
-      },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
-      link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
-      },
-    },
-    {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description: "Howdy is a place for joining communities you care about",
-      logo: Howdy,
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
-      logo: CDGOLogo,
     },
   ],
 } as const;
