@@ -1,22 +1,4 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
+import { ConsultlyLogo, EvercastLogo, ParabolLogo } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -24,13 +6,12 @@ export const RESUME_DATA = {
   initials: "PP",
   location: "Mumbai, India",
   locationLink: "https://www.google.com/maps/place/mumbai/india",
-  about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+  about: "Full Stack Engineer dedicated to building high-quality products.",
   summary:
-    "As a Full Stack Engineer, I specialize in taking products from concept to launch. I excel in leading teams and creating environments where individuals perform at their best. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL.",
+    "As a Full Stack Engineer, I specialize in taking products from concept to launch. I excel in leading teams and creating environments where individuals perform at their best. Currently, I work mostly with Javascript, TypeScript, React, Node.js, and MongoDB",
   avatarUrl:
     "https://avatars.githubusercontent.com/u/91155068?s=400&u=d56f9587068c31cfd3f8196071a3fef4836fc563&v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  personalWebsiteUrl: "https://patilpranit.vercel.app/",
   contact: {
     email: "patilpranit3112@gmail.com",
     social: [
@@ -101,11 +82,15 @@ export const RESUME_DATA = {
     {
       title: "EpicBlogs",
       techStack: [
-        "Full Stack Developer",
-        "TypeScript",
+        "JavaScript",
         "React",
         "Node.js",
-        "GraphQL",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Editorjs",
+        "firebase",
+        "aws s3",
       ],
       description:
         "EpicBlogs is a comprehensive blogging platform that enables users to create, edit, and publish blogs seamlessly. It offers features like user authentication, rich text editing, image uploads, and user profiles. Users can interact with blogs through likes and comments, search for blogs and users, and receive notifications for new interactions. The platform also provides an intuitive blog dashboard for managing authored content and viewing analytics.",
@@ -114,16 +99,20 @@ export const RESUME_DATA = {
         label: "epicblogs",
         href: "https://epic-blogs.vercel.app/",
       },
-     github:"https://github.com/PranitPatil03/modern-blogging-frontend"
+      github: "https://github.com/PranitPatil03/modern-blogging-frontend",
     },
     {
       title: "QuickCart",
       techStack: [
-        "Lead Frontend Developer",
-        "TypeScript",
+        "JavaScript",
         "React",
         "Node.js",
-        "GraphQL",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "passportjs",
+        "stripe",
+        "redux-toolkit",
       ],
       description:
         "Developed an e-commerce platform where users can browse products, add items to their cart, and make purchases seamlessly. The platform features user authentication, product search, and a streamlined checkout process to enhance the shopping experience.",
@@ -132,7 +121,56 @@ export const RESUME_DATA = {
         label: "ecommerce",
         href: "https://e-commerce-gamma-ruddy.vercel.app/",
       },
-      github:"https://github.com/PranitPatil03/e-commerce-frontend"
+      github: "https://github.com/PranitPatil03/e-commerce-frontend",
+    },
+    {
+      title: "AI Summarizer",
+      techStack: ["JavaScript", "React", "Tailwind CSS", "API"],
+      description:
+        "AI Summarizer is a platform that allows users to input text and receive concise summaries. The tool is designed to streamline information consumption, making it easier to grasp key points quickly. Users can enter text, and the platform will generate a summarized version, helping to enhance productivity and understanding.",
+      logo: EvercastLogo,
+      link: {
+        label: "ai_summarizer",
+        href: "https://ai-summarizer-lime.vercel.app/ ",
+      },
+      github: "https://github.com/PranitPatil03/ai_summarizer",
+    },
+    {
+      title: "AnimeHub",
+      techStack: ["Typescript", "Next", "Tailwind CSS", "API"],
+      description:
+        "Anime Hub is an interactive platform where users can explore a vast collection of anime series and movies. It provides detailed information about each anime, including summaries, ratings, and genres, making it easy for users to discover and track their favorite anime content.",
+      logo: EvercastLogo,
+      link: {
+        label: "AnimeHub",
+        href: "https://nike-website-nu.vercel.app/ ",
+      },
+      github: "https://github.com/PranitPatil03/AnimeHub",
+    },
+    {
+      title: "Nike Website",
+      techStack: ["JavaScript", "React", "Tailwind CSS"],
+      description:
+        "The Nike Website project is a revamped UI version of Nike's online store. It features an enhanced user interface for browsing and purchasing products, detailed product pages, and improved navigation to provide a seamless shopping experience.",
+      logo: EvercastLogo,
+      link: {
+        label: "nike_website",
+        href: "https://nike-website-nu.vercel.app/ ",
+      },
+      github: "https://github.com/PranitPatil03/nike_website",
+    },
+
+    {
+      title: "Modern Bank Website",
+      techStack: ["JavaScript", "React", "Tailwind CSS"],
+      description:
+        "The Modern Bank Website project is a revamped UI version of a banking platform designed to enhance user experience. It provides features such as account management, transaction tracking, and financial service accessibility through a modern, user-friendly interface.",
+      logo: EvercastLogo,
+      link: {
+        label: "Modern_Bank_Website",
+        href: "https://modern-bank-website-three.vercel.app/",
+      },
+      github: "https://github.com/PranitPatil03/Modern_Bank_Website",
     },
   ],
 } as const;

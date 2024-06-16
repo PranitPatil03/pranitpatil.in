@@ -13,12 +13,12 @@ interface Props {
   description: string;
   tags: readonly string[];
   link?: string;
-  github:string
+  github: string;
 }
 
 export function ProjectCard({ title, description, tags, link, github }: Props) {
   return (
-    <Card className="flex flex-col overflow-hidden border border-muted shadow-md p-5 ">
+    <Card className="flex flex-col overflow-hidden border border-muted p-5 shadow-sm ">
       <CardHeader className="">
         <div className="space-y-1">
           <CardTitle className="text-base">
@@ -38,12 +38,12 @@ export function ProjectCard({ title, description, tags, link, github }: Props) {
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="font-mono text-xs print:text-[10px]">
+          <CardDescription className="text-justify font-mono text-xs print:text-[10px]">
             {description}
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex justify-between">
+      <CardContent className="mt-auto flex justify-between gap-4">
         <div className="mt-2 flex flex-wrap gap-1">
           {tags.map((tag) => (
             <Badge
@@ -55,10 +55,11 @@ export function ProjectCard({ title, description, tags, link, github }: Props) {
             </Badge>
           ))}
         </div>
-        <div className="mt-2 flex flex-wrap gap-1">
-          <Badge><Link href={github}>Code</Link></Badge>
+        <div className="mt-2 flex h-5 flex-wrap items-center justify-center gap-1">
+          <Badge>
+            <Link href={github}>Code</Link>
+          </Badge>
         </div>
-
       </CardContent>
     </Card>
   );
