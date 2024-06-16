@@ -55,7 +55,7 @@ export const RESUME_DATA = {
     {
       company: "Tech Cryptors",
       link: "https://techcryptors.com/",
-      badges: ["Dahisar, Mumbai"],
+      badges: ["Mumbai"],
       title: "Web Development Intern",
       logo: ParabolLogo,
       start: "Dec 2022",
